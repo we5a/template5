@@ -185,8 +185,8 @@
    .side-nav li:nth-child(1)::before {
        content: "";
        position: absolute;
-       right: 130%;
-       top: 0.2vh;
+       right: 140%;
+       top: 0.25vh;
        width: 0.8vh;
        height: 0.8vh;
        border-radius: 50%;
@@ -199,8 +199,8 @@
 .side-nav li:nth-child(2)::before {
     content: "";
     position: absolute;
-    right: 130%;
-    top: 0.2vh;
+    right: 135%;
+    top: 0.25vh;
     width: 0.8vh;
     height: 0.8vh;
     border-radius: 50%;
@@ -357,8 +357,8 @@
     flex-basis: 4%;
 }
 .dots div {
-    width: 5px;
-    height: 5px;
+    width: 0.5vh;
+    height: 0.5vh;
     border: 2px solid grey;
     border-radius: 50%;
     margin-bottom: 10px;
