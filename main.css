@@ -1,0 +1,372 @@
+@font-face {
+    font-family: Avengers;
+    src: url(avg.ttf);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url(images/background1.jpg)  no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+        }
+
+        @keyframes appearing {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    .container .forward {
+        position: absolute;
+        width: 45vw;
+        height: 100vh; 
+        z-index: 50;
+        left: 16vw;
+        background-image: url(images/forward-man.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+       animation-name: appearing;
+       animation-duration: 2s;
+       animation-delay: 2s;
+       animation-fill-mode: forwards;
+     }
+
+    
+
+    .container::before {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(14, 18, 19, 0.75);
+        z-index: 1;
+    }
+
+    main {
+       
+        width: 95vw;
+        height: 70vh;
+        background: linear-gradient(to right, #19181e, #373743 );
+        z-index: 2;
+        /* display: flex;
+        flex-flow: column; */
+    }
+
+    .top-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-right: 20px;
+        margin-left: 20px;
+        color: white;
+        margin: 15px 40px 25px;
+    }
+
+    .top-line .nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+.top-line .logo {
+    font-family: 'Avengers', sans-sefif;
+    font-size: 30px;
+}
+
+.top-line .logo::first-letter {
+    color: darkred;
+    font-size: 35px;
+}
+
+.top-line .text {
+    font-size: 1.3vh;
+}
+
+.main-part {
+    /* border: 1px solid blue; */
+    width: 80vw;
+    height: 52vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-basis: 90%;
+}
+
+.main-part .left {
+    min-width: 35%;
+   
+    background-color: white;
+    position: relative;
+   
+}
+
+.row {
+    display: flex;
+    /* justify-content: flex-start; */
+    
+    
+    align-items: center;
+
+}
+
+.main-part .right {
+    min-width: 65%;
+      
+    background-image: url(images/iron-fly.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+.main-part .right::after {
+    background: rgba(14, 18, 19, 0.95);
+    background: linear-gradient(90deg, rgba(55,55,66,0.90), rgba(26,25,31,0.90));
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.side-nav  {
+   
+    flex-basis: 5%;
+    color: white;
+    position: relative;
+    align-self: stretch;
+
+    
+    
+    
+   
+    font-size: 1.4vh;
+    text-transform: uppercase;
+    
+}
+
+.side-nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    
+} 
+
+.side-nav li {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    transform: rotate(-90deg);
+
+    white-space: nowrap;
+}
+
+.side-nav li.active {
+    color: darkred;
+}
+
+.side-nav li:nth-child(1) {
+    top: 12%;
+   }
+
+   .side-nav li:nth-child(1)::before {
+       content: "";
+       position: absolute;
+       right: 130%;
+       top: 0.2vh;
+       width: 0.8vh;
+       height: 0.8vh;
+       border-radius: 50%;
+       background-color: white;
+   }
+.side-nav li:nth-child(2) {
+    top: 40%;
+}
+
+.side-nav li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    right: 130%;
+    top: 0.2vh;
+    width: 0.8vh;
+    height: 0.8vh;
+    border-radius: 50%;
+    background-color: white;
+}
+.side-nav li:nth-child(3) {
+    top: 80%;
+
+}
+   
+
+.left .bar {
+    width: 15%;
+    height: 5px;
+    background-color: darkred;
+    position: relative;
+    left: 13%;
+    top: 15%;
+}
+
+.left .iron {
+    position: relative;
+    top: 25%;
+    left: 18%;
+    font-size: 8vw;
+    color: darkred;
+}
+
+.left .date {
+    position: relative;
+    top: 15vh;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family:  'Arial Narrow', sans-serif;
+    font-size: 0.8vw;
+}
+
+.left .date span:first-child {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.right .sign{
+    width: 1vw;
+    height: 2vh;
+    background-color: darkred;
+    position: relative;
+    left: 83%;
+    top: 13%;
+    z-index: 2;
+}
+
+.right .sign::before {
+    content: "";
+    position: absolute;
+    width: 2vw;
+    height: 0.2vh;
+    background-color: white;
+    z-index: 4;
+    top: 35%;
+    left: 30%;
+}
+
+.right .sign::after {
+    content: "";
+    position: absolute;
+    width: 0.8vw;
+    height: 0.2vh;
+    background-color: white;
+    left: 155%;
+    transform: rotate(35deg);
+    z-index: 3;
+    top: 0.2vh;
+}
+
+.right .man {
+    position: relative;
+    top: 23%;
+    left: 10%;
+    font-size: 8vw;
+    color: white;
+    z-index: 2;
+}
+
+.right .button {
+    position: relative;
+    z-index: 2;
+    width: 9vw;
+    height: 5vh;
+    background-color: darkred;
+    top: 15vh;
+    left: 35vw;
+    border-radius: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.right .button a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    font-size: 1vw;
+}
+
+.right .text {
+    z-index: 3;
+    position: relative;
+    top: 17vh;
+    left: 35vw;
+    font-size: 0.7vw;
+    color: white;
+}
+
+.right .arrow {
+    width: 1.8vw;
+    height: 0.2vh;
+    background-color: white;
+    position: relative;
+   
+    top: 16.5vh;
+    left: 93%;
+    z-index: 2;
+}
+
+.right .arrow::before {
+    position: absolute;
+    content: "";
+    width: 0.8vw;
+    height: 0.1vh;
+    background-color: white;
+    top: 0.1vh;
+    left: 1vw;
+    transform: rotate(-10deg);
+    
+}
+.right .arrow::after {
+    position: absolute;
+    content: "";
+    width: 0.8vw;
+    height: 0.1vh;
+    background-color: white;
+    top: -0.1vh;
+    left: 1vw;
+    transform: rotate(10deg);
+    
+}
+
+.dots {
+    flex-basis: 4%;
+}
+.dots div {
+    width: 5px;
+    height: 5px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+  
+}
+
+.dots div.active {
+    border-color: white;
+}
